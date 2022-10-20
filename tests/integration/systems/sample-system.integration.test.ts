@@ -1,4 +1,4 @@
-import { system_map ,startSystem, stopSystem} from "../../../src/systems/sample-http/sample-system";
+import {system_map, startSystem, stopSystem} from "../../../src/systems/sample-http/sample-system";
 import supertest from "supertest";
 
 describe("Sample System", () => {
@@ -13,9 +13,11 @@ describe("Sample System", () => {
         startSystem(system_map);
         await supertest("http://localhost:3000").get("/").expect(200);
         stopSystem(system_map);
-        try { await supertest("http://localhost:3000").get("/") }
-        catch (e) {
-            expect(e.message).toContain("ECONNREFUSED") }
+        try {
+            await supertest("http://localhost:3000").get("/")
+        } catch (e) {
+            expect(e.message).toContain("ECONNREFUSED")
+        }
     });
 
 });
