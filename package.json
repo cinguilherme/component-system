@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
-    "dev-sample": "ts-node src/systems/sample-system.ts",
-    "unit": "",
+    "dev-sample": "ts-node src/systems/sample/sample-system.ts",
+    "unit": "jest tests/unit --config jest.config.ts --coverage --verbose --runInBand",
     "integration": ""
   },
   "keywords": [],

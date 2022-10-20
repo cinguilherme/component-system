@@ -1,4 +1,5 @@
 import express from 'express';
+import {ComponentInterface} from "../ComponentInterface";
 
 interface HtppComponent {
     name: "http",
@@ -7,36 +8,50 @@ interface HtppComponent {
     stopComponent: Function,
 }
 
-const newApp = () => {
-    const app = express();
 
-    // app.get('/', (r,res) => {
-    //     res.send('hello world');
-    // });
+export class HttpComponent implements ComponentInterface {
 
-    return app;
+    public name: string = "http";
+    private _state: any;
+    public dependencies: Array<ComponentInterface>;
+
+    constructor() {
+        this.dependencies = []
+    }
+
+    start() {
+        this._state = newComponent();
+        this._state.server = this._state.startComponent();
+        console.log("http server is started");
+    }
+
+    status() {
+
+    }
+
+    stop() {
+        console.log('stop component evoked');
+        this._state.stopComponent(this._state);
+    }
+
+
 }
 
-const loadRoutes = () => {
-
-}
-
-const startServer = (app:any) => {
-    app.listen(3000, () => {
+const startServer = (app: any) => {
+    return app.listen(3000, () => {
         console.log('server running on port 3000');
     });
 }
 
-const startComponent = () => {
-    console.log('starting http component');
-    
-    const app = newApp();
 
-    const flip = () => {
-        startServer(app);
-    }
+const newApp = () => {
+    const app = express();
 
-    return {app, flip}
+    app.get('/', (r, res) => {
+        res.send('hello world');
+    });
+
+    return app;
 }
 
 export const newComponent: () => HtppComponent = () => {
@@ -44,7 +59,13 @@ export const newComponent: () => HtppComponent = () => {
     return {
         name: "http",
         app,
-        startComponent: () => startServer(app),
-        stopComponent: () => console.log('stop app')
+        startComponent: () => {
+            return startServer(app)
+        },
+        stopComponent: (state: any) => {
+            console.log('stop app');
+            state.server.close();
+            console.log('no longer listening');
+        }
     }
 }
