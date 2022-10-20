@@ -1,4 +1,4 @@
-import { system_map ,startSystem, stopSystem} from "../../../src/systems/sample/sample-system";
+import { system_map ,startSystem, stopSystem} from "../../../src/systems/sample-http/sample-system";
 import supertest from "supertest";
 
 describe("Sample System", () => {

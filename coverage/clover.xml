@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666299252042" clover="3.2.0">
-  <project timestamp="1666299252042" name="All files">
-    <metrics statements="99" coveredstatements="95" conditionals="16" coveredconditionals="16" methods="11" coveredmethods="10" elements="126" coveredelements="121" complexity="0" loc="99" ncloc="99" packages="2" files="2" classes="2"/>
+<coverage generated="1666301593408" clover="3.2.0">
+  <project timestamp="1666301593408" name="All files">
+    <metrics statements="146" coveredstatements="130" conditionals="24" coveredconditionals="23" methods="16" coveredmethods="13" elements="186" coveredelements="166" complexity="0" loc="146" ncloc="146" packages="4" files="4" classes="4"/>
     <package name="components.http_server_component">
       <metrics statements="73" coveredstatements="69" conditionals="10" coveredconditionals="10" methods="9" coveredmethods="8"/>
       <file name="http_server_component.ts" path="/Users/guilhermecintra/Development/ts-components-arch-system/src/components/http_server_component/http_server_component.ts">
@@ -81,10 +81,65 @@
         <line num="73" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="systems.sample">
-      <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
-      <file name="sample-system.ts" path="/Users/guilhermecintra/Development/ts-components-arch-system/src/systems/sample/sample-system.ts">
-        <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+    <package name="logics">
+      <metrics statements="21" coveredstatements="16" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="string-logics.ts" path="/Users/guilhermecintra/Development/ts-components-arch-system/src/logics/string-logics.ts">
+        <metrics statements="21" coveredstatements="16" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="systems">
+      <metrics statements="22" coveredstatements="17" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="2"/>
+      <file name="system-logics.ts" path="/Users/guilhermecintra/Development/ts-components-arch-system/src/systems/system-logics.ts">
+        <metrics statements="22" coveredstatements="17" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="systems.sample-http">
+      <metrics statements="30" coveredstatements="28" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="2"/>
+      <file name="sample-system.ts" path="/Users/guilhermecintra/Development/ts-components-arch-system/src/systems/sample-http/sample-system.ts">
+        <metrics statements="30" coveredstatements="28" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -111,6 +166,10 @@
         <line num="24" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="25" count="2" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
       </file>
     </package>
   </project>

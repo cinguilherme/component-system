@@ -24,3 +24,7 @@ export const stopSystem = (system_map: SystemMapLayout) => {
         .reduce((a, b) => a.concat(b), []);
     console.log("system stopped");
 }
+
+export const dev = () => {
+    startSystem(system_map);
+}
