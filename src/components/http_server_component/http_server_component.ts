@@ -13,7 +13,7 @@ export class HttpComponent implements ComponentInterface {
 
     public name: string = "http";
     private _state: any;
-    public dependencies: Array<ComponentInterface>;
+    public dependencies: Array<string>;
 
     constructor() {
         this.dependencies = []
@@ -26,7 +26,9 @@ export class HttpComponent implements ComponentInterface {
     }
 
     status() {
-
+        console.log('status component evoked');
+        console.log(this._state);
+        console.log(this._state.server);
     }
 
     stop() {

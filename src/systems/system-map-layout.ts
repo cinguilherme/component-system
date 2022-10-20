@@ -7,5 +7,5 @@ export interface SystemComponentInterface {
 }
 
 export interface SystemMapLayout {
-    components: Array<any>
+    components: Array<SystemComponentInterface>
 }

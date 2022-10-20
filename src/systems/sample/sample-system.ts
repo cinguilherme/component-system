@@ -1,26 +1,26 @@
 import { HttpComponent } from '../../components/http_server_component/http_server_component'
-import {ComponentInterface} from "../../components/ComponentInterface";
-import {SystemComponentInterface} from "../system-map-layout";
-
-interface SystemMap {
-    components: Array<any>
-}
+import {SystemMapLayout} from "../system-map-layout";
 
 const http = new HttpComponent();
 
-const system_map: SystemMap = {components: [http]}
+export const system_map: SystemMapLayout = {
+    components: [{
+        dependencies: [],
+        name: "http",
+        component: http
+    }]
+}
 
-system_map.components
-    .forEach((c) => {
-        c.dependencies.forEach((a: ComponentInterface) => a.start())
-        c.start()
-        return c
-    });
+export const startSystem = (system_map: SystemMapLayout) => {
+    system_map.components
+        .map((c) => c.component.start())
+        .reduce((a, b) => a.concat(b), []);
+    console.log("system started");
+}
 
-console.log("system up")
-
-// system_map.components.forEach(c => {
-//     c.stop();
-// })
-
-// deactivate all components
+export const stopSystem = (system_map: SystemMapLayout) => {
+    system_map.components
+        .map((c) => c.component.stop())
+        .reduce((a, b) => a.concat(b), []);
+    console.log("system stopped");
+}

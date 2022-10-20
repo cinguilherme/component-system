@@ -1,0 +1,57 @@
+Arguments: 
+  /Users/guilhermecintra/.nvm/versions/node/v16.16.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add -D @types/supertest
+
+PATH: 
+  /Users/guilhermecintra/Library/pnpm:/Users/guilhermecintra/opt/anaconda3/bin:/Users/guilhermecintra/opt/anaconda3/condabin:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.1.0/Contents/Home/bin:/Users/guilhermecintra/clj-kondo/.clj-kondo:/Users/guilhermecintra/flutter/bin:/Users/guilhermecintra/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/guilhermecintra/.cargo/bin:/Users/guilhermecintra/Development/ts-components-arch-system/node_modules/.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/guilhermecintra/Library/Caches/Yarn/v6/npm-locate-path-6.0.0-55321eb309febbc59c4801d931a72452a681d286-integrity/node_modules/locate-path/index.d.ts' -> '/Users/guilhermecintra/Development/ts-components-arch-system/node_modules/mocha/node_modules/locate-path/index.d.ts'
+
+npm manifest: 
+  {
+    "name": "ts-components-arch-system",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest",
+      "build": "tsc",
+      "dev-sample": "ts-node src/systems/sample/sample-system.ts",
+      "unit": "jest tests/unit --config jest.config.ts --coverage --verbose --runInBand",
+      "integration": "jest tests/integration --config jest.config.ts --verbose"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/express": "^4.17.14",
+      "@types/jest": "^29.1.2",
+      "@types/node": "^18.8.3",
+      "jest": "^29.1.2",
+      "mocha": "^10.0.0",
+      "prettier": "^2.7.1",
+      "ts-jest": "^29.0.3",
+      "ts-node": "^10.9.1",
+      "typescript": "^4.8.4"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "immutable": "^4.1.0",
+      "ramda": "^0.28.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
