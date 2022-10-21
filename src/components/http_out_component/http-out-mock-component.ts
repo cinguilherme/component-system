@@ -1,22 +1,18 @@
-import {ComponentInterface} from "../ComponentInterface";
+import { ComponentInterface } from '../ComponentInterface'
 
 export class HttpOutMockComponent implements ComponentInterface {
-    dependencies: Array<string> = [];
-    name: string = "http-out-mock";
+    dependencies: Array<string> = []
+    name: string = 'http-out-mock'
 
-    public http_out;
+    public http_out
 
-    constructor(bookmark: any) {
-    }
+    constructor(bookmark: any) {}
 
     start() {
-        this.http_out = (url, ops?) => {};
+        this.http_out = (url, ops?) => {}
     }
 
-    status() {
-    }
+    status() {}
 
-    stop() {
-
-    }
+    stop() {}
 }

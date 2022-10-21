@@ -1,24 +1,15 @@
-import {ComponentInterface} from "../ComponentInterface";
+import { ComponentInterface } from '../ComponentInterface'
 
 class MockHttpComponent implements ComponentInterface {
+    private state: any
+    public name: string = 'http'
+    dependencies: Array<string> = []
 
-    private state: any;
-    public name: string = "http";
-    dependencies: Array<string> = [];
+    constructor() {}
 
-    constructor() {
-    }
+    start() {}
 
-    start() {
-    }
+    status() {}
 
-    status() {
-    }
-
-    stop() {
-    }
-
-
-
-
+    stop() {}
 }
