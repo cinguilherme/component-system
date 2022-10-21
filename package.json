@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "dev": "ts-node src/dev.ts --watch",
+    "dev": "ts-node src/dev.ts",
     "unit": "jest tests/unit --config jest.config.ts --coverage --verbose",
     "integration": "jest tests/integration --config jest.config.ts --verbose"
   },
@@ -32,7 +32,7 @@
     "commander": "^9.4.1",
     "express": "^4.18.2",
     "immutable": "^4.1.0",
-    "node-fetch": "^3.2.10",
+    "node-fetch": "2",
     "ramda": "^0.28.0",
     "winston": "^3.8.2"
   }

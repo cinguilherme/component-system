@@ -1,8 +1,8 @@
-import { dev } from "./systems/sample-http/sample-system";
+import {cli_system} from "./systems/system-cli/sample-system-cli";
+import {CliComponent} from "./components/cli_input_component/cli-component";
 
-import { program } from "commander";
+cli_system.start();
 
-program.command("start").action(() => {
-    console.log('bla')
-});
+const cli = cli_system.system_map.components[0].component as CliComponent;
 
+cli.program.parse()
