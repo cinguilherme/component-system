@@ -4,7 +4,7 @@ class MockHttpComponent implements ComponentInterface {
 
     private state: any;
     public name: string = "http";
-    dependencies: Array<ComponentInterface> = [];
+    dependencies: Array<string> = [];
 
     constructor() {
     }
