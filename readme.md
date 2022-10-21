@@ -8,3 +8,9 @@
 
 
 #### Imagination in visual
+
+
+#### Systems as maps of components and their dependencies with managed life cycles
+
+#### Components treated as interfaces and their implementations as functions (or objects) that can be swapped out eg. Integration tests using an implementation of http_out that does not reach to the world.
+
