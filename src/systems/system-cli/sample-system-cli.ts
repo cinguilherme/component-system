@@ -1,9 +1,9 @@
-import {SystemMapLayout, system} from "../system-map-layout";
+import {SystemMap, system} from "../system-map";
 import {CliComponent} from "../../components/cli_input_component/cli-component";
 
 const cli = new CliComponent();
 
-export const system_map: SystemMapLayout = {
+export const system_map: SystemMap = {
     components: [{
         dependencies: [],
         name: "cli",

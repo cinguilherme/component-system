@@ -1,18 +1,19 @@
-import {system_map, startSystem, stopSystem} from "../../../src/systems/sample-http/sample-system";
+import {server_system} from "../../../src/systems/sample-http/sample-system";
 import supertest from "supertest";
 
 describe("Sample System", () => {
 
     it('should start and stop the system', () => {
-        startSystem(system_map);
-        stopSystem(system_map);
+        server_system.start();
+        server_system.stop();
     });
 
 
     it('should start, expose a working endpoint and stop the system', async () => {
-        startSystem(system_map);
+        server_system.start();
         await supertest("http://localhost:3000").get("/").expect(200);
-        stopSystem(system_map);
+
+        server_system.stop();
         try {
             await supertest("http://localhost:3000").get("/")
         } catch (e) {

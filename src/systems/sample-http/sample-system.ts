@@ -1,9 +1,9 @@
 import { HttpComponent } from '../../components/http_server_component/http_server_component'
-import {SystemMapLayout} from "../system-map-layout";
+import {system, SystemMap} from "../system-map";
 
 const http = new HttpComponent();
 
-export const system_map: SystemMapLayout = {
+export const system_map: SystemMap = {
     components: [{
         dependencies: [],
         name: "http",
@@ -11,20 +11,4 @@ export const system_map: SystemMapLayout = {
     }]
 }
 
-export const startSystem = (system_map: SystemMapLayout) => {
-    system_map.components
-        .map((c) => c.component.start())
-        .reduce((a, b) => a.concat(b), []);
-    console.log("system started");
-}
-
-export const stopSystem = (system_map: SystemMapLayout) => {
-    system_map.components
-        .map((c) => c.component.stop())
-        .reduce((a, b) => a.concat(b), []);
-    console.log("system stopped");
-}
-
-export const dev = () => {
-    startSystem(system_map);
-}
+export const server_system = system(system_map);
