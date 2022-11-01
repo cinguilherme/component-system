@@ -42,3 +42,13 @@ services:
       - redis
     command: redis-server --requirepass "root"
 
+  localstack:
+    image: localstack/localstack:0.11.3
+    container_name: localstack
+    restart: always
+    ports:
+      - 4566:4566
+      - 4571:4571
+    environment:
+      - SERVICES=s3,lambda,cloudformation,cloudwatch,cloudwatchlogs,apigateway,iam,sts,events,sqs,sns
+
