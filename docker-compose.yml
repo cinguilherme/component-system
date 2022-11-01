@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  
+  mongo:
+    image: mongo:4.2.3
+    container_name: mongo
+    restart: always
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      - mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: test
+    command: mongod --auth
+
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb
+    restart: always
+    ports:
+      - 8000:8000
+    networks:
+      - dynamodb
+    environment:
+      - JAVA_OPTS=-Djava.library.path=./DynamoDBLocal_lib -Xmx256m -Xms256m
+    command: -jar DynamoDBLocal.jar -sharedDb -inMemory -port 8000
+
+
+  redis:
+    image: redis:6.0.5
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - redis
+    command: redis-server --requirepass "root"
+
